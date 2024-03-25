@@ -1,0 +1,18 @@
+#logo{
+    width: 7rem;
+    object-fit: cover;
+}
+
+#formSearch button{
+    background-color: var(--azul-500);
+    border:none;
+    color: var(--branco);
+}
+#formSearch button:hover{
+    background-color: var(--branco);
+    color: var(--azul-500);
+    border:solid 1px var(--azul-500);
+}
+#navbar{
+    background-color: var(--gray-500);
+}

@@ -1,0 +1,28 @@
+#itensbar{
+    border-bottom:1px solid var(--gray-500);
+}
+#itensbar ul{
+    background-color: var(--azul-500);
+    color: aliceblue;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+#itensbar ul li{
+    
+    border-right: 1px solid var(--gray-500);
+}
+#itensbar ul li:hover {
+    background-color: var(--branco);
+    border-top-right-radius: 3px;
+    border-top-left-radius: 3px;
+}
+
+#itensbar a{
+    color: var(--branco);
+}
+#itensbar a:hover{
+    color: var(--azul-500);
+    
+}

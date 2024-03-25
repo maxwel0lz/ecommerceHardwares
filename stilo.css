@@ -1,0 +1,12 @@
+@import url("componentesCSS/stNav.css");
+@import url("componentesCSS/itensBar.css");
+@import url("componentesCSS/produto.css");
+@import url("componentesCSS/footer.css");
+
+
+body{
+    background-color:black;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color: var(--branco);
+}
+
