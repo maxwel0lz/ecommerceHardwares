@@ -1,4 +1,32 @@
-
+.item:hover{
+    box-shadow: 0 0 0.5em var(--gray-800) inset;
+}
 #boxprodutos{
     background-color: var(--vermelho-500);
+    border-radius: 8px;
+    box-shadow: 0em 0em 1em var(--gray-800);
+}
+#boxpreco{
+    display: flex;
+    flex-direction: column;
+    gap: 5px; 
+}
+#preco{
+    font-size: 1.5rem;
+    color: var(--azul-500);
+}
+#bntcomprar{
+    background-color: transparent;
+    border: 1px solid var(--azul-500);
+    border-radius: 5px;
+    color: var(--azul-500);
+    padding: 6px 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+}
+#bntcomprar:hover{
+    background-color: var(--azul-500);
+    color: var(--branco);
 }
