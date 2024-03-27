@@ -1,0 +1,20 @@
+#sessaoLogin{
+    display: flex
+}
+#logologin{
+    
+}
+#boxleft{
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+    background-color: var(--vermelho-500);
+    width: 40%;
+    height: 100vh;
+}
+#boxright{
+    background-color: var(--branco);
+    height: 100vh;
+    width: 100%;
+}
