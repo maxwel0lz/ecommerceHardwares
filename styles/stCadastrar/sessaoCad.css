@@ -1,0 +1,81 @@
+#sessaoCad{
+    display: flex;
+    align-items: center;
+}
+#conteiner{
+    display: flex;
+    width: 100%;
+    padding: 1rem 5rem;
+    min-height: 80vh;
+    
+}
+#imgbemvindo{
+    width: 300px;   
+}
+#boxleft{
+    box-shadow: 0 0 2em var(--gray-500);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--gray-500);
+    width: 40%;
+}
+#boxright strong{
+    font-size: 2rem;
+}
+#boxright{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 0 2em var(--gray-500);
+    background-color: var(--branco);
+    width: 100%;
+    padding: 1.2rem;
+}
+/*Forms*/
+
+
+/*Formulario*/
+
+#formulario{
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    width: 70%;
+    min-width: 50%;
+    gap: 5px;
+}
+.inputs{
+    padding: 0.2rem 1rem;
+    border-radius: 2px;
+    background-color: var(--gray-100);
+    border-color: var(--azul-500);
+}
+
+
+
+
+/*RESPONSIVO*/
+@media only screen and (max-width: 750px) {
+    #conteiner{
+        flex-direction: column;
+        gap: 30px;
+        padding: 2rem;
+    }
+    #boxleft{
+        width: 100%;
+        background-color:var(--branco);
+        box-shadow: none;
+    }
+    #formulario{
+        padding: 1rem 0;
+    }
+    #navbar{
+        display: none;
+    }
+    #imgbemvindo{
+        width: 200px;
+    }
+}
