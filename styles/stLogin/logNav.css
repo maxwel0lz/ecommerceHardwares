@@ -3,10 +3,10 @@
     display: flex;
     padding: 1rem 6rem;
     width: 100%;
-    background-color: var(--gray-500);
-    justify-content: space-between;
+    background-color: var(--branco);
+    justify-content: center;
     align-items: center;
-    box-shadow: 0 0 0.2em inset ;
+    
 }
 #boxconta{
     display: flex;
@@ -15,12 +15,13 @@
 #boxconta  svg{
     padding: 1px;
     background-color: var(--azul-500);
-    color: aliceblue;
+    color: var(--branco);
     border-radius: 50%;
-    width: 20px;
-    height: 20px;
+    width: 2rem;
+    height: 2rem;
 }
 #boxconta > span{
+    font-size: 1.5rem;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -44,20 +45,27 @@
 
 @media only screen and (max-width: 450px){
     #navbar{
+        background-color: var(--branco);
         flex-direction: column;
         align-items: center;
         justify-content: center;
         gap: 5px;
         padding: 5px;
     }
-    #boxconta > span{
+    #boxconta > span {
+        flex-direction: column;
+    }
+    #boxconta svg {
+        width: 8rem;
+        height: 8rem;
+        padding: 1rem;
+    }
+    #logo{
         display: none;
     }
     #boxconta > p{
         margin: 0;
         margin-top: 10px;
     }
-    #logo{
-        width: 15rem;
-    }
+    
 }
