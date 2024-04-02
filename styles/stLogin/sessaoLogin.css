@@ -49,17 +49,24 @@
     border-radius: 2px;
     background-color: var(--gray-100);
     border-color: var(--azul-500);
+    border: 1px solid var(--gray-500);
+    opacity: 70%;
+}
+.inputs:hover{
+    border: 1px solid var(--azul-500);
 }
 #boxbtn{
     display: flex;
     align-items: center;
     justify-content: space-between;
+    
 }
 #btnentrar{
     border-radius: 2px;
     padding: 0.2rem 0;
     margin-top: 0.5rem;
     width: 35%;
+    border: 1px solid var(--gray-100);
 }
 #btnentrar:hover{
     background-color: var(--azul-500);

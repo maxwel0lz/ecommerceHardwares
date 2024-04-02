@@ -25,7 +25,7 @@
     font-size: 2rem;
 }
 #boxright{
-    font-family: Georgia, 'Times New Roman', Times, serif;
+   font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -48,14 +48,10 @@
     min-width: 50%;
     gap: 5px;
 }
-.inputs{
-    padding: 0.2rem 1rem;
-    border-radius: 2px;
-    background-color: var(--gray-100);
-    border-color: var(--azul-500);
-}
 
  .inpts{
+    
+    border-radius: 2px !important;
     background-color: var(--gray-100) !important;
     border: solid 1px var(--gray-500) !important;
     opacity: 60%;
@@ -65,10 +61,7 @@
     border: solid 1px var(--azul-500) !important;
     opacity: 70%;
 }
-.lab{
-    font-family: Georgia, 'Times New Roman', Times, serif;
-    font-size: 0.856rem;
-}
+
 #btnCriar{
     background-color: var(--azul-500);
     color: var(--branco);
