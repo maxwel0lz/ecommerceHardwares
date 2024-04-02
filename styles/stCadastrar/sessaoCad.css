@@ -25,6 +25,7 @@
     font-size: 2rem;
 }
 #boxright{
+    font-family: Georgia, 'Times New Roman', Times, serif;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -32,7 +33,7 @@
     box-shadow: 0 0 2em var(--gray-500);
     background-color: var(--branco);
     width: 100%;
-    padding: 1.2rem;
+    padding: 2rem 4rem;
 }
 /*Forms*/
 
@@ -54,10 +55,40 @@
     border-color: var(--azul-500);
 }
 
+ .inpts{
+    background-color: var(--gray-100) !important;
+    border: solid 1px var(--gray-500) !important;
+    opacity: 60%;
+    
+}
+.inpts:hover{
+    border: solid 1px var(--azul-500) !important;
+    opacity: 70%;
+}
+.lab{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 0.856rem;
+}
+#btnCriar{
+    background-color: var(--azul-500);
+    color: var(--branco);
+    padding: 0.3rem 20%;
+    border-radius: 5px;
+}
+#btnCriar:hover{
+    background-color: var(--azul-800);
+    color: var(--branco);
+}
+
 
 
 
 /*RESPONSIVO*/
+@media only screen and (max-width: 950px) {
+    #boxright{
+        padding: 2rem 1rem;
+    }
+}
 @media only screen and (max-width: 750px) {
     #conteiner{
         flex-direction: column;
