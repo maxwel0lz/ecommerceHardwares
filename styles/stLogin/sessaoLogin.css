@@ -45,11 +45,11 @@
     gap: 5px;
 }
 .inputs{
-    padding: 0.2rem 1rem;
-    border-radius: 2px;
-    background-color: var(--gray-100);
-    border-color: var(--azul-500);
-    border: 1px solid var(--gray-500);
+    padding: 0.2rem 1rem !important;
+    border-radius: 2px !important;
+    background-color: var(--gray-100) !important;
+    border-color: var(--azul-500) !important;
+    border: 1px solid var(--gray-500) !important;
     opacity: 70%;
 }
 .inputs:hover{

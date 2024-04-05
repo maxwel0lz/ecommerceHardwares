@@ -32,12 +32,18 @@
                 <strong>Login</strong>
                 <form id="formulario" action="">
                     <label for="user">E-mail</label>
-                    <input id="user" class="inputs" type="email" placeholder="Digite seu e-mail:" >
+                    <input id="user" class="inputs form-control " type="email" placeholder="Digite seu e-mail:" required >
+                    <div  class="valid-feedback">
+                        Frase de validação
+                    </div>
                     <label for="senha">Senha</label>
                     <input id="senha" class="inputs" type="password" placeholder="Digite sua senha:">
+                    <div  class="valid-feedback">
+                        Frase de validação
+                    </div>
                     <span id="boxbtn">
                         <a href="cadastrar.html" class="link-underline link-underline-opacity-0">Cadastrar-se</a>
-                        <input id="btnentrar"  onclick="entrar()" type="submit" value="Entrar">
+                        <input id="btnentrar"  type="submit" value="Entrar">
                     </span>
                 </form>
                 
@@ -55,5 +61,6 @@
       integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
       crossorigin="anonymous">
 </script>
+<script src="../scripts/iteracao.js"></script>
 
 </html>
