@@ -7,7 +7,10 @@ function validarCadastro() {
     
 }
 
-document.querySelector("#iNome").addEventListener('blur', function() {
+document.querySelector("#iNome").addEventListener('input', function() {
     const nome = document.querySelector("#iNome")
-    nome.classList += "is-valid"
+    if(nome.value == ""){
+        nome.classList += "is-invalid"
+    }
+    
 })
