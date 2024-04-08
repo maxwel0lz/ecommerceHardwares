@@ -1,0 +1,45 @@
+#logo{
+    width: 11rem;
+    object-fit: cover;
+}
+
+#formSearch{ 
+    min-width: 40%;
+    margin-right:10%;
+    margin-left: 7%;
+    
+}
+
+#formSearch button{
+    background-color: var(--azul-500);
+    border:none;
+    color: var(--branco);
+    border:solid 1px var(--azul-500);
+    
+}
+#formSearch button:hover{
+    background-color: var(--branco);
+    color: var(--azul-500);
+    border:solid 1px var(--azul-500);
+}
+#navbar{
+    background-color: var(--gray-500);
+    box-shadow: 0 0 2em var(--gray-800) inset;
+}
+
+#navicon li{
+    font-size: 1.1rem;
+}
+
+@media only screen and (max-width: 890px){
+    #formSearch{
+        min-width: 0;
+        margin-right:0;
+        margin-left: 0;
+    }
+}
+@media only screen and (max-width: 1080px){
+    #navicon li{
+        font-size: 0.856rem;
+    }
+}

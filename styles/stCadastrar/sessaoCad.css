@@ -35,8 +35,6 @@
     width: 100%;
     padding: 2rem 4rem;
 }
-/*Forms*/
-
 
 /*Formulario*/
 
@@ -72,9 +70,6 @@
     background-color: var(--azul-800);
     color: var(--branco);
 }
-
-
-
 
 /*RESPONSIVO*/
 @media only screen and (max-width: 950px) {

@@ -77,7 +77,10 @@ document.querySelector("#iConfSenha").addEventListener('input', function(){
     verificaSenha('#iConfSenha')
     ativarBotao()
 })
-
+document.querySelector('#senha').addEventListener('input', function(){
+    console.log("ativo");
+    verificaSenha('#senha')
+})
 
 /*document.querySelector('#btnCriar').addEventListener('input', function(){
     ativarBotao()
