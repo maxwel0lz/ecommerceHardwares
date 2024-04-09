@@ -29,6 +29,7 @@
 
 #navicon li{
     font-size: 1.1rem;
+    color: aqua !important;
 }
 
 @media only screen and (max-width: 890px){

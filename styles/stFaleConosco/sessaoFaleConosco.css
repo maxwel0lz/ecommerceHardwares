@@ -1,0 +1,29 @@
+
+#conteiner{
+    padding: 3rem 5rem;
+    margin: 1.8rem 0;
+}
+.titulo{
+    font-family:  Arial, Helvetica, sans-serif;
+    color: var(--vermelho-500);
+}
+#quemSomos{
+    
+}
+#faleConosco{
+    padding: 10px;
+    box-shadow: 0 0.5em 1em -1em black;
+}
+#faleConosco p{
+    font-weight: bold;
+    font-size: 0.856rem;
+}
+#autor{
+    padding: 10px;
+    box-shadow: 0 0.5em 1em -1em black;
+}
+#autor p{
+    
+    font-size: 0.856rem;
+}
+
