@@ -1,0 +1,45 @@
+#conteiner{
+    margin-top: 2rem;
+    background-color: var(--branco);
+}
+#boximagem{
+    display: flex;
+    padding: 1rem;
+    justify-content: center;
+}
+#carouselExample{
+    max-width: 80%;
+}
+#btnnext{
+    background-image: url('../../assets/arrow-right-circle.svg') !important;
+}
+#btnprevi{
+    background-image: url('../../assets/arrow-left-circle.svg') !important;
+}
+#descricao{
+    font-size: 1.5rem;
+    border-bottom: 1px solid var(--gray-500);
+    padding: 1rem;
+}
+#descricao p{
+    font-size: 1rem;
+}
+#status{
+    border-bottom: 1px solid var(--gray-500);
+    padding: 0.8rem;
+    text-align: center;
+}
+#status > h6{
+    margin-bottom: 0 !important;
+    color: #008000;
+}
+#preco{
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 5px;
+}
+#preco strong{
+ font-size: 1.5rem;
+}
+
