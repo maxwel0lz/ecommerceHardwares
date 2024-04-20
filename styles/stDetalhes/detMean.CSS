@@ -1,6 +1,12 @@
+p , h6 , h5 {
+    margin: 0 !important;
+    padding: 0 !important;
+    line-height: 1.1;
+}
 #conteiner{
-    margin-top: 2rem;
+    margin: 0 ;    
     background-color: var(--branco);
+    margin-top: 3rem;
 }
 #boximagem{
     display: flex;
@@ -16,8 +22,16 @@
 #btnprevi{
     background-image: url('../../assets/arrow-left-circle.svg') !important;
 }
+#boxdescricao{
+    word-wrap: break-word;
+    border: 1px solid var(--azul-500);
+    border-radius: 8px;
+    box-shadow: 0 0 2em -0.8em var(--azul-500);
+    padding: 1rem;
+}
 #descricao{
     font-size: 1.5rem;
+    text-align: justify;
     border-bottom: 1px solid var(--gray-500);
     padding: 1rem;
 }
@@ -33,13 +47,77 @@
     margin-bottom: 0 !important;
     color: #008000;
 }
+#boxpreco{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin-top: 1rem;
+}
 #preco{
     display: flex;
     align-items: center;
     gap: 15px;
     padding: 5px;
 }
-#preco strong{
- font-size: 1.5rem;
+#info strong{
+    font-size: 1.5rem;
+    color: var(--azul-500);
+    line-height: 1;
+}
+#info p {
+    color: var(--azul-500);
+    margin: 0;
+    font-weight: 0;
+    font-size: 0.6rem;
+}
+#info h6{
+    margin: 0;
+    font-weight: normal;
+    font-size: 0.7rem;
+    line-height: 1.4;
+}
+#boxbtn{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+   
+}
+#boxbtn div{
+    display: flex;
+    flex-direction: column;
+}
+#boxbtn button{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 15px;
+    padding: 0.5rem 1.5rem;
+    background-color: var(--azul-500);
+    color: var(--branco);
+    border-radius: 8px;
+}
+#infobtn > h5{
+    letter-spacing: 1px;
+}
+#infobtn > p{
+    font-size: 0.6rem;
+}
+#formaPagamento {
+    word-wrap: break-word;
+    padding: 1rem;
+    width: 100%;
 }
 
+
+@media only screen and (max-width: 500px)  {
+    #descricao{
+        font-size: 1rem;
+    }
+    #boxpreco{
+        flex-direction: column;
+        align-items: center;
+    }
+    #boxbtn button{
+        padding: 0.5rem 1rem;
+    }
+}
