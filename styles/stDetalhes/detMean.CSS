@@ -3,15 +3,21 @@ p , h6 , h5 {
     padding: 0 !important;
     line-height: 1.1;
 }
+#logo{
+    width: 11rem;
+}
 #conteiner{
     margin: 0 ;    
     background-color: var(--branco);
     margin-top: 3rem;
+    align-items: center;
+    margin-bottom: 5rem;
 }
 #boximagem{
     display: flex;
     padding: 1rem;
     justify-content: center;
+    align-items: center;
 }
 #carouselExample{
     max-width: 80%;
@@ -22,20 +28,21 @@ p , h6 , h5 {
 #btnprevi{
     background-image: url('../../assets/arrow-left-circle.svg') !important;
 }
-#boxdescricao{
+#boxtitulo{
+    background-color: var(--branco);
     word-wrap: break-word;
     border: 1px solid var(--azul-500);
     border-radius: 8px;
     box-shadow: 0 0 2em -0.8em var(--azul-500);
     padding: 1rem;
 }
-#descricao{
+#titulo{
     font-size: 1.5rem;
     text-align: justify;
     border-bottom: 1px solid var(--gray-500);
     padding: 1rem;
 }
-#descricao p{
+#titulo p{
     font-size: 1rem;
 }
 #status{
@@ -50,8 +57,10 @@ p , h6 , h5 {
 #boxpreco{
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
+    justify-content: space-between;
     margin-top: 1rem;
+    padding-bottom: 1rem ;
+    border-bottom:1px solid var(--gray-500) ;
 }
 #preco{
     display: flex;
@@ -60,7 +69,8 @@ p , h6 , h5 {
     padding: 5px;
 }
 #info strong{
-    font-size: 1.5rem;
+    
+    font-size: 2rem;
     color: var(--azul-500);
     line-height: 1;
 }
@@ -91,10 +101,14 @@ p , h6 , h5 {
     flex-direction: row;
     align-items: center;
     gap: 15px;
-    padding: 0.5rem 1.5rem;
+    padding: 0.7rem 1.2rem;
     background-color: var(--azul-500);
     color: var(--branco);
     border-radius: 8px;
+    opacity: 100% ;
+}
+#boxbtn button:hover{
+    opacity: 80% ;
 }
 #infobtn > h5{
     letter-spacing: 1px;
@@ -104,10 +118,52 @@ p , h6 , h5 {
 }
 #formaPagamento {
     word-wrap: break-word;
-    padding: 1rem;
     width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
 }
 
+/* Caixa de bancos */
+.boxpagamento{
+    margin-top: 15px;
+    border: 1px solid var(--gray-100);
+    border-radius: 3px;
+    padding: 0.5rem;
+}
+.boxpagamento h4{
+    font-size: 1.1rem;
+    line-height: 1.6;
+}
+#boxbancos{
+   display: flex; 
+   gap: 0.5rem;
+}
+.imgbanco{
+    float: left;
+    max-width: 3rem;
+    background-color: var(--gray-100);
+    border-radius: 2px;
+}
+
+.imgbanco img{
+    width: 100%;
+
+}
+#boxredes{
+    display: flex; 
+    gap: 1rem;
+ }
+
+/* Descrição */
+#sessao-descricao{
+    padding: 1rem;
+    margin-bottom: 2rem;
+}
+#tituloH2{
+    font-weight: 700;
+    color: var(--azul-500);
+}
 
 @media only screen and (max-width: 500px)  {
     #descricao{
