@@ -10,17 +10,34 @@ const listaProdutos = [
         titulo: "Intel",
         descricao: "Agora Outro teste para ver se funcioba com todos os item ne pae kkkkkkkkkkkkkkkkkk",
         imagem: "assets/motagemHadware.png"
+    },
+    {
+        id: 3,
+        titulo: "Intel",
+        descricao: "Agora Outro teste para ver se funcioba com todos os item ne pae kkkkkkkkkkkkkkkkkk",
+        imagem: "assets/motagemHadware.png"
+    },
+    {
+        id: 4,
+        titulo: "Intel",
+        descricao: "Agora Outro teste para ver se funcioba com todos os item ne pae kkkkkkkkkkkkkkkkkk",
+        imagem: "assets/motagemHadware.png"
     }
 ]
 
 
-function criarViewProduto(titulo,desc,imagem) {
+function criarViewProduto(id,titulo,desc,imagem) {
     const boxprodutos = document.querySelector('#boxprodutos')
 
+    const tagA = document.createElement('a')
+    tagA.classList = "col-sm-3 link-underline link-underline-opacity-0"
+    tagA.href = `pages/detalhes.html?id=${id}`
+    boxprodutos.appendChild(tagA)
+    
     const div = document.createElement('div')
     div.classList = 'card col-4 item'
     div.style.width = '16rem'
-    boxprodutos.appendChild(div)
+    tagA.appendChild(div)
 
     const tagImg = document.createElement('img')
     tagImg.src = imagem
@@ -68,10 +85,15 @@ function criarViewProduto(titulo,desc,imagem) {
 }
 
 for(let produto of listaProdutos){
+    let id = produto.id
     let titulo = produto.titulo
     let descricao = produto.descricao
     let imagem = produto.imagem
-    criarViewProduto(titulo,descricao,imagem)
+    criarViewProduto(id,titulo,descricao,imagem)
  }
+const box = document.querySelector('#boxprodutos')
+box.addEventListener('click', function(event){
+    console.log(event.target);
+})
 
 

@@ -1,3 +1,8 @@
+a{
+    margin: 0 !important;
+    padding: 0 !important;
+
+}
 .item:hover{
     box-shadow: 0 0 0.5em var(--gray-800) inset;
 }
