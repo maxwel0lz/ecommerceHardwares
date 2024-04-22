@@ -29,10 +29,14 @@ const listaProdutos = [
 function criarViewProduto(id,titulo,desc,imagem) {
     const boxprodutos = document.querySelector('#boxprodutos')
 
+    const boxCentral = document.createElement('div')
+    boxprodutos.appendChild(boxCentral)
+    boxCentral.classList = "col"
+
     const tagA = document.createElement('a')
-    tagA.classList = "col-sm-3 link-underline link-underline-opacity-0"
+    tagA.classList = "link-underline link-underline-opacity-0"
     tagA.href = `pages/detalhes.html?id=${id}`
-    boxprodutos.appendChild(tagA)
+    boxCentral.appendChild(tagA)
     
     const div = document.createElement('div')
     div.classList = 'card col-4 item'
