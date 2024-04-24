@@ -1,29 +1,6 @@
-const listaProdutos = [
-    {
-        id: 1,
-        titulo: "Ryzen",
-        descricao: "TEste para ter uma dinamica maior para minha pagina, descriçoes com 4 linhas exatas",
-        imagem: "assets/motagemHadware.png"
-    },
-    {
-        id: 2,
-        titulo: "Intel",
-        descricao: "Agora Outro teste para ver se funcioba com todos os item ne pae kkkkkkkkkkkkkkkkkk",
-        imagem: "assets/motagemHadware.png"
-    },
-    {
-        id: 3,
-        titulo: "Intel",
-        descricao: "Agora Outro teste para ver se funcioba com todos os item ne pae kkkkkkkkkkkkkkkkkk",
-        imagem: "assets/motagemHadware.png"
-    },
-    {
-        id: 4,
-        titulo: "Intel",
-        descricao: "Agora Outro teste para ver se funcioba com todos os item ne pae kkkkkkkkkkkkkkkkkk",
-        imagem: "assets/motagemHadware.png"
-    }
-]
+import lista from "./listaPRodutos.js";
+const listaProdutos = lista()
+ 
 
 
 function criarViewProduto(id,titulo,desc,imagem) {
@@ -31,7 +8,6 @@ function criarViewProduto(id,titulo,desc,imagem) {
 
     const boxCentral = document.createElement('div')
     boxprodutos.appendChild(boxCentral)
-    boxCentral.classList = "col"
 
     const tagA = document.createElement('a')
     tagA.classList = "link-underline link-underline-opacity-0"
@@ -89,6 +65,7 @@ function criarViewProduto(id,titulo,desc,imagem) {
 }
 
 for(let produto of listaProdutos){
+    console.log(produto);
     let id = produto.id
     let titulo = produto.titulo
     let descricao = produto.descricao

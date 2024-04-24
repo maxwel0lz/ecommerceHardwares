@@ -1,15 +1,17 @@
-a{
-    margin: 0 !important;
-    padding: 0 !important;
 
-}
 .item:hover{
     box-shadow: 0 0 0.5em var(--gray-800) inset;
+}
+#produtos{
+    padding: 0 2rem;
+    margin:  2rem 0;
 }
 #boxprodutos{
     background-color: var(--vermelho-500);
     border-radius: 8px;
     box-shadow: 0em 0em 1em var(--gray-800);
+    display: flex;
+    flex-flow: row wrap ;
 }
 #boxpreco{
     display: flex;
