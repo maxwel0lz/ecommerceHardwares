@@ -1,0 +1,94 @@
+#conteiner{
+    
+   
+    display: flex;
+    flex-direction: row;
+}
+#box-itens-car{
+    width: 100%;
+    padding: 1rem;
+    
+}
+#box-2{
+    border-radius: 8px;
+    box-shadow: 0 0 1em -0.2em var(--gray-500);
+}
+#tabela{
+    max-width: 100%;
+}
+#tabela th{
+    
+    border-bottom: 1px solid gray;
+}
+
+.col_titulo-tab{
+    padding: 1rem;
+}
+.col_item-tab{
+    padding: 1rem;
+    text-align: center;
+    word-wrap: break-word;
+    
+}
+
+
+
+/* Box de pedido */
+
+#boxpedido{
+    padding: 1rem;
+    max-width: 100%;
+    min-width: 21rem;
+   
+}
+#box-1{
+    box-shadow: 0 0 1em -0.2em var(--gray-500);
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    /*border: 1px solid var(--azul-500);*/
+    text-align: center;
+}
+#box-1 > h2{
+    border-bottom: 1px solid var(--gray-500);
+    padding: 0.5rem;
+}
+#sub{
+    font-size: calc(0.8rem + 0.2vw);
+    padding: 0.5rem;
+}
+#total{
+    padding: 0.5rem;
+    font-size: calc(1.2rem + 0.8vw);
+    background-color: rgba(0, 140, 255, 0.63);
+}
+#info-avista{
+    padding: 0.5rem;
+    color: var(--azul-500);
+}
+#info-avista > p{
+    font-size: 0.7rem;
+}
+#info-avista strong{
+    font-size:calc( 1.2rem + 0.9vw);
+    color: var(--azul-500);
+    letter-spacing: 1px;
+}
+#info-cred{
+    color: var(--vermelho-500);
+    padding: 0.5rem;
+}
+#info-cred > p{
+    font-size: 0.7rem;
+    color: var(--vermelho-500);
+}
+#info-cred strong{
+    font-size:calc( 1.2rem + 0.9vw);
+    color: var(--vermelho-500);
+    letter-spacing: 1px;
+}
+@media only screen and (max-width: 890px){
+    #conteiner{
+        flex-direction: column-reverse;
+    }
+}

@@ -1,7 +1,7 @@
 import lista from "./listaPRodutos.js";
 const listaProdutos = lista()
  
-
+console.log(listaProdutos);
 
 function criarViewProduto(id,titulo,desc,imagem) {
     const boxprodutos = document.querySelector('#boxprodutos')

@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="../global.css">
     <link rel="stylesheet" href="../styles/stNav.css">
     <link rel="stylesheet" href="../styles/footer.css">
+    <link rel="stylesheet" href="../styles/stCarrinho/mainCarrinho.css">
     <link
     href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
     rel="stylesheet"
@@ -54,8 +55,67 @@
         </div>
       </nav>
 
+      <main class="p-5">
+        <h1>Meu Carrinho</h1>
+        <div id="conteiner">
+          <div id="box-itens-car">
+            <div id="box-2">
+              <table id="tabela">
+                <thead>
+                  <tr class="linha-titulo-tab">
+                    <th class="col_titulo-tab">Produto</th>
+                    <th class="col_titulo-tab">Descriçao</th>
+                    <th class="col_titulo-tab">Qtd</th>
+                    <th class="col_titulo-tab">Preço</th>
+                    <th class="col_titulo-tab"></th>
+                  </tr>
+                </thead>
+                <tbody class="">
+                  <tr class="linha-item-tab">
+                    <td class="col_item-tab"><img src="../assets/motagemHadware.png" width="100px" alt=""></td>
+                    <td class="col_item-tab">descrição aaaaaaaaa aaaaaa aaaaaaaaa aaaaaaaaa aaaaaaa aaaaao produto aqui</td>
+                    <td class="col_item-tab">1</td>
+                    <td class="col_item-tab">R$300,50</td>
+                    <td class="col_item-tab"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-trash" viewBox="0 0 16 16"><path d="M5.5 5.5A.5.5 0 0 1 6 6v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5m2.5 0a.5.5 0 0 1 .5.5v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5m3 .5a.5.5 0 0 0-1 0v6a.5.5 0 0 0 1 0z"/><path d="M14.5 3a1 1 0 0 1-1 1H13v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V4h-.5a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1H6a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1h3.5a1 1 0 0 1 1 1zM4.118 4 4 4.059V13a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1V4.059L11.882 4zM2.5 3h11V2h-11z"/></svg></td>
+                  </tr>
+                  <tr class="linha-item-tab">
+                    <td class="col_item-tab"><img src="../assets/motagemHadware.png" width="100px" alt=""></td>
+                    <td class="col_item-tab">descrição aaaaaaaaa aaaaaa aaaaaaaaa aaaaaaaaa aaaaaaa aaaaao produto aqui</td>
+                    <td class="col_item-tab">1</td>
+                    <td class="col_item-tab">R$300,50</td>
+                    <td class="col_item-tab"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-trash" viewBox="0 0 16 16"><path d="M5.5 5.5A.5.5 0 0 1 6 6v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5m2.5 0a.5.5 0 0 1 .5.5v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5m3 .5a.5.5 0 0 0-1 0v6a.5.5 0 0 0 1 0z"/><path d="M14.5 3a1 1 0 0 1-1 1H13v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V4h-.5a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1H6a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1h3.5a1 1 0 0 1 1 1zM4.118 4 4 4.059V13a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1V4.059L11.882 4zM2.5 3h11V2h-11z"/></svg></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+          <div id="boxpedido">
+            <div id="box-1">
+              <h2>Rerumo</h2>
+              <span id="sub">Subtotal:
+                <strong>R$100,00</strong>
+              </span>
+              <span id="total">Total:
+                <strong>R$100,00</strong>
+              </span>
+              <div id="info-avista">
+                <p>á vista</p>
+                <strong>R$150,89</strong>
+                <h6>no PIX com 15% desconto</p>
+              </div>
+              <div id="info-cred">
+                <p>á vista</p>
+                <strong>R$150,89</strong>
+                <h6>Até 12x no de <span>R$25,00</span><br>sem juros no cartão</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
+
+
       <!-- FOOTER -->
-      <footer id="footer" class="fixed-bottom">
+      <footer id="footer" class="">
         <div id="boxfooter" class="d-flex justify-content-between ">
           
           <div class="">
