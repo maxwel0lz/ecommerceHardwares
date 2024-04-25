@@ -4,7 +4,7 @@ const listaProdutos = [
     {
         id: 1,
         marca: "HYPERX",
-        titulo: "HEADSET GAMER HYPERX CLOUD III, SOM SURROUND 7.1, ",
+        titulo: "HEADSET GAMER HYPERX CLOUD III, SOM SURROUND 7.1 ",
         imagem: "https://media.pichau.com.br/media/catalog/product/cache/2f958555330323e505eba7ce930bdf27/7/2/727a8aa2.jpg"
     },
     {
