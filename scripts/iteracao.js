@@ -11,7 +11,7 @@ function verificaBasico(idTag){
     if(item.value == ''){
         item.classList.remove('is-valid')
         item.classList.add("is-invalid")
-    }                                                      //FUNÇÃO PARA VERIFICAR SE O INPUTE TA VEZIO
+    }                                                      //FUNÇÃO PARA VERIFICAR SE O INPUTE TA VAZIO
     else if(!item.classList.contains('is-valid')){
         item.classList.remove('is-invalid')
         item.classList.add("is-valid")   

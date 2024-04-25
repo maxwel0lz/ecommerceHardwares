@@ -1,14 +1,39 @@
-import lista from "./listaPRodutos.js";
-const listaProdutos = lista()
- 
-console.log(listaProdutos);
 
+
+const listaProdutos = [
+    {
+        id: 1,
+        marca: "HYPERX",
+        titulo: "HEADSET GAMER HYPERX CLOUD III, SOM SURROUND 7.1, ",
+        imagem: "https://media.pichau.com.br/media/catalog/product/cache/2f958555330323e505eba7ce930bdf27/7/2/727a8aa2.jpg"
+    },
+    {
+        id: 2,
+        marca: "DUEX",
+        titulo: "MONITOR GAMER DUEX DX270QGP165, 27 POL.1MS 165HZ",
+        imagem: "https://media.pichau.com.br/media/catalog/product/cache/2f958555330323e505eba7ce930bdf27/d/x/dx270qgp165024526.jpg"
+    },
+    {
+        id: 3,
+        marca: "SMART",
+        titulo: "FONTE THERMALTAKE SMART 700W 80PLUS WHITE, SPD-0700P",
+        imagem: "https://media.pichau.com.br/media/catalog/product/cache/2f958555330323e505eba7ce930bdf27/s/p/spd-0700p3.jpg"
+    },
+    {
+        id: 4,
+        marca: "PCYES",
+        titulo: "MOUSE GAMER PCYES GAIUS, RGB, 12400DPI, 7 BOTOES",
+        imagem: "https://media.pichau.com.br/media/catalog/product/cache/2f958555330323e505eba7ce930bdf27/p/m/pmggbv4.jpg"
+    }
+]
+
+console.log(listaProdutos);
 function criarViewProduto(id,titulo,desc,imagem) {
     const boxprodutos = document.querySelector('#boxprodutos')
-
+    
     const boxCentral = document.createElement('div')
     boxprodutos.appendChild(boxCentral)
-
+    
     const tagA = document.createElement('a')
     tagA.classList = "link-underline link-underline-opacity-0"
     tagA.href = `pages/detalhes.html?id=${id}`
@@ -16,17 +41,19 @@ function criarViewProduto(id,titulo,desc,imagem) {
     
     const div = document.createElement('div')
     div.classList = 'card col-4 item'
-    div.style.width = '16rem'
+    div.style.width = '18rem'
     tagA.appendChild(div)
 
     const tagImg = document.createElement('img')
     tagImg.src = imagem
+    tagImg.id = 'imag'
     tagImg.classList = 'card-img-top'
     tagImg.alt = 'Imagem do produto'
     div.appendChild(tagImg)
 
     const div2 = document.createElement('div')
     div2.classList = 'card-body'
+    div2.id = 'tituloH5'
     div.appendChild(div2)
 
 
