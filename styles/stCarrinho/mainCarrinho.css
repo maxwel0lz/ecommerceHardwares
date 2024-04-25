@@ -19,6 +19,11 @@
     
     border-bottom: 1px solid gray;
 }
+#lixeira:hover{
+ background-color: var(--vermelho-500);
+ color: var(--branco);
+ transition: 0.3s;
+}
 
 .col_titulo-tab{
     padding: 1rem;

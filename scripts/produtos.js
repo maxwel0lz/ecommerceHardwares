@@ -1,33 +1,34 @@
-
-
 const listaProdutos = [
     {
         id: 1,
         marca: "HYPERX",
         titulo: "HEADSET GAMER HYPERX CLOUD III, SOM SURROUND 7.1 ",
-        imagem: "https://media.pichau.com.br/media/catalog/product/cache/2f958555330323e505eba7ce930bdf27/7/2/727a8aa2.jpg"
+        imagem: "https://media.pichau.com.br/media/catalog/product/cache/2f958555330323e505eba7ce930bdf27/7/2/727a8aa2.jpg",
+        valor: 265.99
     },
     {
         id: 2,
         marca: "DUEX",
         titulo: "MONITOR GAMER DUEX DX270QGP165, 27 POL.1MS 165HZ",
-        imagem: "https://media.pichau.com.br/media/catalog/product/cache/2f958555330323e505eba7ce930bdf27/d/x/dx270qgp165024526.jpg"
+        imagem: "https://media.pichau.com.br/media/catalog/product/cache/2f958555330323e505eba7ce930bdf27/d/x/dx270qgp165024526.jpg",
+        valor: 1687.89
     },
     {
         id: 3,
         marca: "SMART",
         titulo: "FONTE THERMALTAKE SMART 700W 80PLUS WHITE, SPD-0700P",
-        imagem: "https://media.pichau.com.br/media/catalog/product/cache/2f958555330323e505eba7ce930bdf27/s/p/spd-0700p3.jpg"
+        imagem: "https://media.pichau.com.br/media/catalog/product/cache/2f958555330323e505eba7ce930bdf27/s/p/spd-0700p3.jpg",
+        valor: 299.99
     },
     {
         id: 4,
         marca: "PCYES",
         titulo: "MOUSE GAMER PCYES GAIUS, RGB, 12400DPI, 7 BOTOES",
-        imagem: "https://media.pichau.com.br/media/catalog/product/cache/2f958555330323e505eba7ce930bdf27/p/m/pmggbv4.jpg"
+        imagem: "https://media.pichau.com.br/media/catalog/product/cache/2f958555330323e505eba7ce930bdf27/p/m/pmggbv4.jpg",
+        valor: 99.89
     }
 ]
 
-console.log(listaProdutos);
 function criarViewProduto(id,titulo,desc,imagem) {
     const boxprodutos = document.querySelector('#boxprodutos')
     
@@ -92,7 +93,6 @@ function criarViewProduto(id,titulo,desc,imagem) {
 }
 
 for(let produto of listaProdutos){
-    console.log(produto);
     let id = produto.id
     let titulo = produto.titulo
     let descricao = produto.descricao
@@ -102,6 +102,12 @@ for(let produto of listaProdutos){
 const box = document.querySelector('#boxprodutos')
 box.addEventListener('click', function(event){
     console.log(event.target);
+})
+
+const btnComprar = document.querySelector('#bntcomprar')
+btnComprar.addEventListener('click', function(event){
+    const iconCart = document.querySelector('#contadorBola')
+    
 })
 
 
