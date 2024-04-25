@@ -12,24 +12,8 @@ const prodNoCarrinho = [
         titulo: "MONITOR GAMER DUEX DX270QGP165, 27 POL.1MS 165HZ",
         imagem: "https://media.pichau.com.br/media/catalog/product/cache/2f958555330323e505eba7ce930bdf27/d/x/dx270qgp165024526.jpg",
         valor: 1687.89
-    },
-    {
-        id: 3,
-        marca: "SMART",
-        titulo: "FONTE THERMALTAKE SMART 700W 80PLUS WHITE, SPD-0700P",
-        imagem: "https://media.pichau.com.br/media/catalog/product/cache/2f958555330323e505eba7ce930bdf27/s/p/spd-0700p3.jpg",
-        valor: 299.99
-    },
-    {
-        id: 4,
-        marca: "PCYES",
-        titulo: "MOUSE GAMER PCYES GAIUS, RGB, 12400DPI, 7 BOTOES",
-        imagem: "https://media.pichau.com.br/media/catalog/product/cache/2f958555330323e505eba7ce930bdf27/p/m/pmggbv4.jpg",
-        valor: 99.89
-    }
-    
+    } 
 ]
-
 
 function addItemNoCarrinho(titulo, imagem, valor) {
     const lista = document.querySelector('#listaCart')

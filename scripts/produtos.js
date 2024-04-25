@@ -28,6 +28,10 @@ const listaProdutos = [
         valor: 99.89
     }
 ]
+const btnCarrinho = document.querySelector('#btn-carrinho')
+btnCarrinho.addEventListener('click', function(){
+    window.location.href = './pages/carrinho.html'
+})
 
 function criarViewProduto(id,titulo,desc,imagem) {
     const boxprodutos = document.querySelector('#boxprodutos')
