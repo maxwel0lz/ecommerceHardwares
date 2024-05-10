@@ -1,0 +1,12 @@
+@import url("../stNav.css");
+@import url("./itensBar.css");
+@import url("./produto.css");
+@import url("../footer.css");
+
+
+body{
+    background-color:black;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color: var(--branco);
+}
+
