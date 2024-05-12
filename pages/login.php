@@ -30,15 +30,19 @@
     
             <div id="boxright">
                 <strong>Login</strong>
-                <form id="formulario" action="">
+                
+                <form id="formulario"  action="../controller/login_controller"  method="post">
                     <label for="user">E-mail</label>
-                    <input id="user" class="inputs form-control " type="email" placeholder="Digite seu e-mail:" required >
-                    <div  class="valid-feedback">
-                        Frase de validação
+                    <input id="user" class="is-valid inputs form-control " name='email' type="email" placeholder="Digite seu e-mail:" required >
+                    <div  class=" valid-feedback">
+                        frase
+                        <?php
+                        $fraseResponse;
+                        ?>
                     </div>
                     <label for="senha">Senha</label>
-                    <input id="senha" class="inputs  form-control form-control-sm " type="password" placeholder="Digite sua senha:">
-                    <div  class="invalid-feedback">
+                    <input id="senha" class="inputs  form-control form-control-sm " name='senha' type="password" placeholder="Digite sua senha:">
+                    <div  class=" invalid-feedback">
                         Frase de validação
                     </div>
                     <span id="boxbtn">

@@ -1,6 +1,6 @@
 const btnentrar = document.querySelector('#btnentrar')
 const senha = document.querySelector("#senha") 
-
+mensagemDeErro()
 function verificaSenha(idTag) {
     const item = document.querySelector(`${idTag}`)
     if(item.value.length < 8){
@@ -24,7 +24,10 @@ function ativarBotao() {
         console.log('style');
         btnentrar.style = "#bntentar:hover{nome}"
     }
-                                                       //FUNÇÃO PARA ATIVAR BOTAO CASO TODOS OS INPUTS ESTIVEREM VALIDOS
+    //FUNÇÃO PARA ATIVAR BOTAO CASO TODOS OS INPUTS ESTIVEREM VALIDOS
+}
+function mensagemDeErro() {
+    console.log('erro');
 }
 
 document.querySelector('#senha').addEventListener('input', function(){
@@ -32,5 +35,6 @@ document.querySelector('#senha').addEventListener('input', function(){
 })
 senha.addEventListener('input', function(){
     ativarBotao()
-    console.log("bnt");
 })
+
+
