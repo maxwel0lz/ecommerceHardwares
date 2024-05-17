@@ -18,7 +18,7 @@
     <nav id="navbar" class="" >
         <div id="boxconta"  >
             <span><svg xmlns="http://www.w3.org/2000/svg" width="18"height="18" fill="currentColor" class="bi bi-person-fill" viewBox="0 0 16 16"> <path d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6"/></svg><strong>Minha conta</strong></span>
-            <p>Faça <a class="link-underline link-underline-opacity-0" href="login.html">Login</a> ou <a class="link-underline link-underline-opacity-0" href="cadastrar.html">Cadastre-se</a></p>
+            <p>Faça <a class="link-underline link-underline-opacity-0" href="login.html">Login</a> ou <a class="link-underline link-underline-opacity-0" href="cadastrar.php">Cadastre-se</a></p>
         </div>        
     </nav>
 
@@ -31,19 +31,19 @@
             <div id="boxright">
                 <strong>Login</strong>
                 
-                <form id="formulario"  action="../controller/login_controller"  method="post">
+                <form id="formulario"  action="../controller/login_controller.php"  method="post">
                     <label for="user">E-mail</label>
-                    <input id="user" class="is-valid inputs form-control " name='email' type="email" placeholder="Digite seu e-mail:" required >
-                    <div  class=" valid-feedback">
-                        frase
-                        <?php
-                        $fraseResponse;
-                        ?>
+                    <input id="user" class="is-invalid inputs form-control " name='email' type="email" placeholder="Digite seu e-mail:" required >
+                    <div  class=" invalid-feedback" name='msgErro'>
+                    <?php
+                       $msg = !isset($_GET['msg'])? '' : $_GET['msg'];
+                       echo $msg 
+                    ?>
                     </div>
                     <label for="senha">Senha</label>
                     <input id="senha" class="inputs  form-control form-control-sm " name='senha' type="password" placeholder="Digite sua senha:">
                     <div  class=" invalid-feedback">
-                        Frase de validação
+                        Senha deve conter min 8 caracteres!
                     </div>
                     <span id="boxbtn">
                         <a href="cadastrar.html" class="link-underline link-underline-opacity-0">Cadastrar-se</a>

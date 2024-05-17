@@ -31,31 +31,31 @@
     
             <div id="boxright" class="gap-5">
                 <strong>CADASTRAR-SE</strong>
-                <form class="row g-3 ">
+                <form class="row g-3 " action="../controller/cadastrar_controller.php" method="post">
                     <div class="col-md-6 ">
                       <label for="validationServer01" class="form-label">Nome*</label>
-                      <input type="text" class=" inpts form-control form-control-sm  "  placeholder="Digite seu nome aqui:" id="iNome" required>
+                      <input type="text" class=" inpts form-control form-control-sm" name="iNome"  placeholder="Digite seu nome aqui:" id="iNome" required>
                       <div id="frase"  class="valid-feedback ">
                         Frase de validação
                       </div>
                     </div>
                     <div class="col-md-6">
                       <label for="validationServer02" class="form-label">Sobrenome*</label>
-                      <input type="text" class="inpts form-control form-control-sm" placeholder="Digite seu sobrenome aqui:" id="iSobrenome"  required>
+                      <input type="text" class="inpts form-control form-control-sm" name="iSobrenome" placeholder="Digite seu sobrenome aqui:" id="iSobrenome"  required>
                       <div class="valid-feedback ">
                         Frase de validação
                       </div>
                     </div>
                     <div class="col-md-6">
                       <label for="validationServer02" class="form-label">Cpf*</label>
-                      <input type="text" class="inpts form-control form-control-sm" placeholder="Digite seu cpf aqui:" id="iCpf"   required>
+                      <input type="text" class="inpts form-control form-control-sm" name="iCpf" placeholder="Digite seu cpf aqui:" id="iCpf"   required>
                       <div id="frase" class="valid-feedback ">Frase de validação</div>  
                       <div id="frase" class="invalid-feedback">Frase de validação</div>  
                     </div>
                     
                     <div class="col-md-6">
                       <label for="validationServer03" class="form-label">E-mail*</label>
-                      <input type="email" class="inpts form-control form-control-sm" placeholder="email@email.com" id="iEmail" aria-describedby="validationServer03Feedback" required>
+                      <input type="email" class="inpts form-control form-control-sm" name="iEmail" placeholder="email@email.com" id="iEmail" aria-describedby="validationServer03Feedback" required>
                       <div id="validationServer03Feedback" class="invalid-feedback ">
                         Frase de validação
                       </div>
@@ -63,7 +63,7 @@
                     
                     <div class="col-md-6">
                       <label for="validationServer05" class="form-label">Senha*</label>
-                      <input type="password" class="inpts form-control form-control-sm" placeholder="Crie uma senha aqui:" id="iSenha" aria-describedby="validationServer05Feedback" required>
+                      <input type="password" class="inpts form-control form-control-sm" placeholder="Crie uma senha aqui:" name="iSenha" id="iSenha" aria-describedby="validationServer05Feedback" required>
                       <div id="validationServer05Feedback" class="invalid-feedback ">
                         Please provide a valid zip.
                       </div>
@@ -71,14 +71,14 @@
 
                     <div class="col-md-6">
                       <label for="validationServer05" class="form-label">Confirmar Senha*</label>
-                      <input type="password" class="inpts form-control form-control-sm " placeholder="Confirme sua senha aqui:" id="iConfSenha" aria-describedby="validationServer05Feedback" required>
+                      <input type="password" class="inpts form-control form-control-sm " name="iConfSenha" placeholder="Confirme sua senha aqui:" id="iConfSenha" aria-describedby="validationServer05Feedback" required>
                       <div id="validationServer05Feedback" class="invalid-feedback ">
                         Please provide a valid zip.
                       </div>
                     </div>
                    
                     <div  class="col-12 d-flex justify-content-center  mt-4">
-                      <button id="btnCriar" class="btn" disabled  type="submit">Criar Conta</button>
+                      <button href="../index.html" id="btnCriar" class="btn" disabled  type="submit">Criar Conta</button>
                     </div>
                   </form>   
             </div> 
