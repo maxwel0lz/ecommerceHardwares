@@ -1,4 +1,5 @@
 <?php
+function conectBD(){
 // Configurações do banco de dados
 $servername = "localhost";
 $username = "root";
@@ -7,5 +8,9 @@ $dbname = "fiftyhards";
 
 // Cria a conexão
 $conn = mysqli_connect($servername, $username, $password, $dbname);
-
+if ($conn->connect_error) {
+    die("Conexão falhou: " . $conn->connect_error);
+}
+return $conn;
+}
 ?>

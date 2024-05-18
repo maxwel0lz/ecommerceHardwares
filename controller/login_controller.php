@@ -1,7 +1,7 @@
 <?php
 function userExiste(){
     include '../data/connectionBD.php';
-
+    $conn = conectBD();
     //PEGANDO INFORMAÇÕES DO INPUT ATRAVES DO METODO POST
     if($_SERVER["REQUEST_METHOD"]== "POST"){
         $email = $_POST["email"];
