@@ -13,8 +13,11 @@
     crossorigin="anonymous"
     />
     <link rel="stylesheet" href="../global.css">
-</head>
-<body>
+  </head>
+  <body>
+    <?php
+    session_start();
+    ?>
 
     <nav id="navbar" class="" >
         <div id="boxconta"  >
@@ -75,6 +78,16 @@
                       <div id="validationServer05Feedback" class="invalid-feedback ">
                         Please provide a valid zip.
                       </div>
+                    </div>
+                    <div class="text-danger" >
+                      <?php
+                      
+                      if (isset($_SESSION['error_menssage'])) {
+                        echo $_SESSION['error_menssage'] . '</p>';
+                        // Limpar a mensagem após exibição
+                        unset($_SESSION['error_menssage']);
+                      }
+                      ?>
                     </div>
                    
                     <div  class="col-12 d-flex justify-content-center  mt-4">
