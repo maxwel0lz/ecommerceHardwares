@@ -15,6 +15,9 @@
     />
   </head>
   <body>
+    <?php
+    session_start();
+    ?>
           <!-- NAVBAR -->
     <nav id="navbar" class="navbar navbar-expand-lg p-3">
       <div class="container-fluid">
@@ -38,11 +41,26 @@
                 <li><a class="dropdown-item" href="./pages/FaleConosco.html">Fale Conosco</a></li>
                 <li><hr class="dropdown-divider"></li>
                 <li><a class="dropdown-item" href="./pages/FaleConosco.html">Contato</a></li>
+                <li><a class="dropdown-item" href="./pages/FaleConosco.html"></a></li>
                 <li><a class="dropdown-item" href="#">Sair</a></li>
               </ul>
             </li>
-            <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="pages/login.php"><svg xmlns="http://www.w3.org/2000/svg"  width="25"height="25" fill="currentColor" class="bi bi-person-fill" viewBox="0 0 16 16"><path d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6"/></svg> Login / Register</a>
+            <li class="nav-item">    
+              <?php
+                if(isset($_SESSION['user'])){
+                  $no = 'Maxwel';
+                echo'<li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false"><svg xmlns="http://www.w3.org/2000/svg"  width="25"height="25" fill="currentColor" class="bi bi-person-fill" viewBox="0 0 16 16"><path d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6"/>Login / Register</svg>'.$_SESSION['user'].'</a>
+                  <ul class="dropdown-menu">
+                    <li><buttom class="dropdown-item">sair</buttom></li>
+                  </ul>
+                  </li>';
+              }
+              else {
+                echo '<a class="nav-link active" aria-current="page" href="pages/login.php"><svg xmlns="http://www.w3.org/2000/svg"  width="25"height="25" fill="currentColor" class="bi bi-person-fill" viewBox="0 0 16 16"><path d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6"/>Login / Register</svg></a>';
+              }
+              ?> 
+              
             </li>
             <li class="nav-item">
               <button id="btn-carrinho" type="button" class="btn btn-secondary position-relative px-3 ms-3">

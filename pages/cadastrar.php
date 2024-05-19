@@ -22,7 +22,7 @@
     <nav id="navbar" class="" >
         <div id="boxconta"  >
             <span><svg xmlns="http://www.w3.org/2000/svg" width="18"height="18" fill="currentColor" class="bi bi-person-fill" viewBox="0 0 16 16"> <path d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6"/></svg><strong>Minha conta</strong></span>
-            <p>Faça <a class="link-underline link-underline-opacity-0" href="login.html">Login</a> ou <a class="link-underline link-underline-opacity-0" href="cadastrar.html">Cadastre-se</a></p>
+            <p>Faça <a class="link-underline link-underline-opacity-0" href="login.php">Login</a> ou <a class="link-underline link-underline-opacity-0" href="cadastrar.php">Cadastre-se</a></p>
         </div>        
     </nav>
 
@@ -91,7 +91,7 @@
                     </div>
                    
                     <div  class="col-12 d-flex justify-content-center  mt-4">
-                      <button href="../index.html" id="btnCriar" class="btn" disabled  type="submit">Criar Conta</button>
+                      <button href="../index.php" id="btnCriar" class="btn" disabled  type="submit">Criar Conta</button>
                     </div>
                   </form>   
             </div> 

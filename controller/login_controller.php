@@ -1,4 +1,5 @@
 <?php
+session_start();
 function userExiste(){
     include '../data/connectionBD.php';
     $conn = conectBD();
@@ -12,12 +13,14 @@ function userExiste(){
     $sql = "SELECT * FROM usuario ";
     //EXECUTANDO QUERY
     $result = $conn->query($sql);
+
     //ENQUANTO HOVER RESULTADO PROUCURE DADOS IGUAS OS INPUTS
     $respose = false;
     while($row = $result->fetch_assoc()){
         if($row['email_user'] == $email && $row['senha_user'] == $senha){
             $respose = true;
-            header("Location: ../index.html");
+            $_SESSION['user'] = $row['nome_user'].' '. $row['sobrenome_user'];
+            header("Location: ../index.php");
             exit();
             break;
         }

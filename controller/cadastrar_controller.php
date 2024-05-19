@@ -46,7 +46,7 @@ existUsers($conn ,$iCpf, $iEmail );
             $sql = "INSERT INTO usuario ( nome_user, sobrenome_user, cpf_user, email_user, senha_user) VALUES ('$iNome', '$iSobrenome','$iCpf','$iEmail','$iSenha')";
             
             if (mysqli_query($conn, $sql)) {
-                header("location: ../index.html");
+                header("location: ../index.php");
             } else {
                 echo "Erro ao inserir o registro: " . mysqli_error($conn);
             }
