@@ -33,7 +33,7 @@ btnCarrinho.addEventListener('click', function(){
     window.location.href = './pages/carrinho.html'
 })
 
-function criarViewProduto(id,titulo,desc,imagem) {
+function criarViewProduto(id,titulo,marca,imagem) {
     const boxprodutos = document.querySelector('#boxprodutos')
     
     const boxCentral = document.createElement('div')
@@ -41,11 +41,12 @@ function criarViewProduto(id,titulo,desc,imagem) {
     
     const tagA = document.createElement('a')
     tagA.classList = "link-underline link-underline-opacity-0"
-    tagA.href = `pages/detalhes.html?id=${id}`
+    tagA.href = `pages/detalhes.php?id=${id}`
     boxCentral.appendChild(tagA)
     
     const div = document.createElement('div')
     div.classList = 'card col-4 item'
+    div.id = 'caixa-im'
     div.style.width = '18rem'
     tagA.appendChild(div)
 
@@ -69,7 +70,7 @@ function criarViewProduto(id,titulo,desc,imagem) {
 
     const descricao = document.createElement('p')
     descricao.classList = 'card-text'
-    descricao.innerHTML = desc
+    descricao.innerHTML = marca
     div2.appendChild(descricao)
 
     const boxpreco = document.createElement('span')
@@ -99,9 +100,9 @@ function criarViewProduto(id,titulo,desc,imagem) {
 for(let produto of listaProdutos){
     let id = produto.id
     let titulo = produto.titulo
-    let descricao = produto.descricao
+    let marca = produto.marca
     let imagem = produto.imagem
-    criarViewProduto(id,titulo,descricao,imagem)
+    criarViewProduto(id,titulo,marca,imagem)
  }
 const box = document.querySelector('#boxprodutos')
 box.addEventListener('click', function(event){

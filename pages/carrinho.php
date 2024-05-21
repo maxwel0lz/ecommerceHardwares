@@ -15,6 +15,9 @@
     
 </head>
 <body>
+  <?php
+  session_start();
+  ?>
     <!-- NAVBAR -->
     <nav id="navbar" class="navbar navbar-expand-lg p-3">
         <div class="container-fluid">
@@ -70,13 +73,31 @@
                   </tr>
                 </thead>
                 <tbody  id="listaCart" class="">
-                  <!-- <tr class="linha-item-tab">
-                    <td class="col_item-tab"><img src="https://media.pichau.com.br/media/catalog/product/cache/2f958555330323e505eba7ce930bdf27/7/2/727a8aa2.jpg" width="100px" alt=""></td>
-                    <td class="col_item-tab">HEADSET GAMER HYPERX CLOUD III, SOM SURROUND 7.1 </td>
-                    <td class="col_item-tab">1</td>
-                    <td class="col_item-tab">R$300,50</td>
-                    <td class="col_item-tab"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-trash" viewBox="0 0 16 16"><path d="M5.5 5.5A.5.5 0 0 1 6 6v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5m2.5 0a.5.5 0 0 1 .5.5v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5m3 .5a.5.5 0 0 0-1 0v6a.5.5 0 0 0 1 0z"/><path d="M14.5 3a1 1 0 0 1-1 1H13v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V4h-.5a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1H6a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1h3.5a1 1 0 0 1 1 1zM4.118 4 4 4.059V13a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1V4.059L11.882 4zM2.5 3h11V2h-11z"/></svg></td>
-                  </tr> -->
+                  <?php
+                    include '../data/connectionBD.php';
+                    $conn = conectBD();
+                    $sql = 'SELECT * FROM produto  ';
+                    //EXECUTANDO QUERY
+                    $result = $conn->query($sql);
+                
+                    //ENQUANTO HOVER RESULTADO PROUCURE DADOS IGUAS OS INPUTS
+                    while($row = $result->fetch_assoc()){
+                      if($_SESSION['id'] == $row['id_prod'])  
+                        $imagem = $row['imagem_prod'];
+                        $titulo = $row['titulo_prod'];
+                        $valor = $row['valor_prod'];
+                        echo '
+                        <tr class="linha-item-tab">
+                        <td class="col_item-tab"><img src='.$imagem.' width="100px" alt=""></td>
+                        <td class="col_item-tab">'.$titulo.'</td>
+                        <td class="col_item-tab">1</td>
+                        <td class="col_item-tab">'.$valor.'</td>
+                        <td class="col_item-tab"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-trash" viewBox="0 0 16 16"><path d="M5.5 5.5A.5.5 0 0 1 6 6v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5m2.5 0a.5.5 0 0 1 .5.5v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5m3 .5a.5.5 0 0 0-1 0v6a.5.5 0 0 0 1 0z"/><path d="M14.5 3a1 1 0 0 1-1 1H13v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V4h-.5a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1H6a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1h3.5a1 1 0 0 1 1 1zM4.118 4 4 4.059V13a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1V4.059L11.882 4zM2.5 3h11V2h-11z"/></svg></td>
+                      </tr>
+                        ';
+                    }
+                  ?>
+                  
                 </tbody>
               </table>
             </div>
@@ -169,7 +190,7 @@
     
 </body>
 
-<script src="../scripts/carrinho.js"></script>
+<!-- <script src="../scripts/carrinho.js"></script> -->
 <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
