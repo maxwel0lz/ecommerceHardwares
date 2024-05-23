@@ -181,6 +181,9 @@
               </svg>
             </div></a>
           </span>
+          <?php
+         echo ($_SESSION['idProduto']);
+          ?>
         </div>
 
       </div>

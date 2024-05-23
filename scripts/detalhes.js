@@ -6,7 +6,7 @@ const params = new URLSearchParams(queryString);
 let idSelecionado = params.get('id');
 const form = document.querySelector('#formBtn')
 console.log(form);
-form.setAttribute('action', `../controller/addCarrinho.php?id=${idSelecionado}`)
+form.action = `../controller/addCarrinho.php?id=${idSelecionado}`
 const listaProdutos = [            
     {
         id: 1,

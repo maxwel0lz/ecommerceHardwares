@@ -30,7 +30,7 @@ const listaProdutos = [
 ]
 const btnCarrinho = document.querySelector('#btn-carrinho')
 btnCarrinho.addEventListener('click', function(){
-    window.location.href = './pages/carrinho.html'
+    window.location.href = './pages/carrinho.php'
 })
 
 function criarViewProduto(id,titulo,marca,imagem) {

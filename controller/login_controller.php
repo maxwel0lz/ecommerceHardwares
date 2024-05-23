@@ -20,6 +20,7 @@ function userExiste(){
         if($row['email_user'] == $email && $row['senha_user'] == $senha){
             $respose = true;
             $_SESSION['user'] = $row['nome_user'].' '. $row['sobrenome_user'];
+            $_SESSION['id_Produto'] = [];
             header("Location: ../index.php");
             exit();
             break;
