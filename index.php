@@ -21,7 +21,7 @@
           <!-- NAVBAR -->
     <nav id="navbar" class="navbar navbar-expand-lg p-3">
       <div class="container-fluid">
-        <a class="navbar-brand" href="#"><img id="logo" src="assets/logo-fiftyhards.svg" alt=""></a>
+        <a class="navbar-brand" href="index.php"><img id="logo" src="assets/logo-fiftyhards.svg" alt=""></a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
@@ -37,12 +37,11 @@
                 Sobre
               </a>
               <ul class="dropdown-menu">
-                <li><a class="dropdown-item" href="./pages/FaleConosco.html">Sobre</a></li>
-                <li><a class="dropdown-item" href="./pages/FaleConosco.html">Fale Conosco</a></li>
+                <li><a class="dropdown-item" href="./pages/FaleConosco.php">Sobre</a></li>
+                <li><a class="dropdown-item" href="./pages/FaleConosco.php">Fale Conosco</a></li>
                 <li><hr class="dropdown-divider"></li>
-                <li><a class="dropdown-item" href="./pages/FaleConosco.html">Contato</a></li>
-                <li><a class="dropdown-item" href="./pages/FaleConosco.html"></a></li>
-                <li><a class="dropdown-item" href="#">Sair</a></li>
+                <li><a class="dropdown-item" href="./pages/FaleConosco.php">Contato</a></li>
+                
               </ul>
             </li>
             <li class="nav-item">    
@@ -52,7 +51,7 @@
                 echo'<li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false"><svg xmlns="http://www.w3.org/2000/svg"  width="25"height="25" fill="currentColor" class="bi bi-person-fill" viewBox="0 0 16 16"><path d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6"/>Login / Register</svg>'.$_SESSION['user'].'</a>
                   <ul class="dropdown-menu">
-                    <li><buttom class="dropdown-item">sair</buttom></li>
+                    <li><a href="controller/Sessoes.php?action=logout" class="dropdown-item">sair</a></li>
                   </ul>
                   </li>';
               }
@@ -66,7 +65,20 @@
               <button id="btn-carrinho" type="button" class="btn btn-secondary position-relative px-3 ms-3">
                 <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-cart4" viewBox="0 0 16 16"><path d="M0 2.5A.5.5 0 0 1 .5 2H2a.5.5 0 0 1 .485.379L2.89 4H14.5a.5.5 0 0 1 .485.621l-1.5 6A.5.5 0 0 1 13 11H4a.5.5 0 0 1-.485-.379L1.61 3H.5a.5.5 0 0 1-.5-.5M3.14 5l.5 2H5V5zM6 5v2h2V5zm3 0v2h2V5zm3 0v2h1.36l.5-2zm1.11 3H12v2h.61zM11 8H9v2h2zM8 8H6v2h2zM5 8H3.89l.5 2H5zm0 5a1 1 0 1 0 0 2 1 1 0 0 0 0-2m-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0m9-1a1 1 0 1 0 0 2 1 1 0 0 0 0-2m-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0"/></svg>
                 <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
-                  <span  id="contadorBola" class="visually">0</span>
+                  <span  id="contadorBola" class="visually"> 
+                    <?php
+                    if (isset($_SESSION['idProduto'])) {
+                      $partes = explode(" ", $_SESSION['idProduto']);
+                      $partes = array_map('intval', $partes); 
+                      $qnt = count($partes);
+                      echo $qnt -1;
+                    }
+                    else {
+                      echo 0;
+                    }
+                    ?>
+                
+                  </span>
                 </span>
               </button>
               
@@ -138,17 +150,17 @@
         <div class="">
           <p class="pfooter" >INSTITUCIONAL</p>
           <ul class="p-0">
-            <a class="link-light link-underline link-underline-opacity-0" href="pages/FaleConosco.html"><li>Quem somos</li></a>
-            <a class="link-light link-underline link-underline-opacity-0" href="pages/FaleConosco.html"><li>Localizaçao</li></a>
-            <a class="link-light link-underline link-underline-opacity-0" href="pages/FaleConosco.html"><li>Autor</li></a>
+            <a class="link-light link-underline link-underline-opacity-0" href="pages/FaleConosco.php"><li>Quem somos</li></a>
+            <a class="link-light link-underline link-underline-opacity-0" href="pages/FaleConosco.php"><li>Localizaçao</li></a>
+            <a class="link-light link-underline link-underline-opacity-0" href="pages/FaleConosco.php"><li>Autor</li></a>
           </ul>
         </div>
 
         <div class="">
           <p class="pfooter">Ajuda</p>
           <ul class="p-0">
-            <a class="link-light link-underline link-underline-opacity-0"  href="pages/FaleConosco.html"><li>Sac</li></a>
-            <a class="link-light link-underline link-underline-opacity-0"  href="pages/FaleConosco.html"><li>Fale Conosco</li></a>
+            <a class="link-light link-underline link-underline-opacity-0"  href="pages/FaleConosco.php"><li>Sac</li></a>
+            <a class="link-light link-underline link-underline-opacity-0"  href="pages/FaleConosco.php"><li>Fale Conosco</li></a>
           </ul>
         </div>
       
@@ -181,9 +193,6 @@
               </svg>
             </div></a>
           </span>
-          <?php
-         echo ($_SESSION['idProduto']);
-          ?>
         </div>
 
       </div>

@@ -16,7 +16,7 @@
 <body>
     <nav id="navbar" class="navbar navbar-expand-lg p-3">
         <div class="container-fluid">
-          <a class="navbar-brand" href="#"><img id="logo" src="../assets/logo2-fiftyhards.svg" alt=""></a>
+          <a class="navbar-brand" href="../index.php"><img id="logo" src="../assets/logo2-fiftyhards.svg" alt=""></a>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
@@ -40,10 +40,28 @@
                 </ul>
               </li>
               <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="login.html"><svg xmlns="http://www.w3.org/2000/svg" width="20"height="20" fill="currentColor" class="bi bi-person-fill" viewBox="0 0 16 16"> <path d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6"/></svg> Login/Register</a>
+                <a class="nav-link active" aria-current="page" href="login.php"><svg xmlns="http://www.w3.org/2000/svg" width="20"height="20" fill="currentColor" class="bi bi-person-fill" viewBox="0 0 16 16"> <path d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6"/></svg> Login/Register</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link active" href="carrinho.html"><svg class="MuiSvgIcon-root" width="20" height="20" focusable="false" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 18c-1.1 0-1.99.9-1.99 2S5.9 22 7 22s2-.9 2-2-.9-2-2-2zM1 2v2h2l3.6 7.59-1.35 2.45c-.16.28-.25.61-.25.96 0 1.1.9 2 2 2h12v-2H7.42c-.14 0-.25-.11-.25-.25l.03-.12.9-1.63h7.45c.75 0 1.41-.41 1.75-1.03l3.58-6.49c.08-.14.12-.31.12-.48 0-.55-.45-1-1-1H5.21l-.94-2H1zm16 16c-1.1 0-1.99.9-1.99 2s.89 2 1.99 2 2-.9 2-2-.9-2-2-2z"></path></svg> Carrinho</a>
+              <button id="btn-carrinho" onclick="window.location= 'carrinho.php'" type="button" class="btn btn-secondary position-relative px-3 ms-3">
+                <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-cart4" viewBox="0 0 16 16"><path d="M0 2.5A.5.5 0 0 1 .5 2H2a.5.5 0 0 1 .485.379L2.89 4H14.5a.5.5 0 0 1 .485.621l-1.5 6A.5.5 0 0 1 13 11H4a.5.5 0 0 1-.485-.379L1.61 3H.5a.5.5 0 0 1-.5-.5M3.14 5l.5 2H5V5zM6 5v2h2V5zm3 0v2h2V5zm3 0v2h1.36l.5-2zm1.11 3H12v2h.61zM11 8H9v2h2zM8 8H6v2h2zM5 8H3.89l.5 2H5zm0 5a1 1 0 1 0 0 2 1 1 0 0 0 0-2m-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0m9-1a1 1 0 1 0 0 2 1 1 0 0 0 0-2m-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0"/></svg>
+                <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+                  <span  id="contadorBola" class="visually"> 
+                    <?php
+                    if (isset($_SESSION['idProduto'])) {
+                      $partes = explode(" ", $_SESSION['idProduto']);
+                      $partes = array_map('intval', $partes); 
+                      $qnt = count($partes);
+                      echo $qnt -1;
+                    }
+                    else {
+                      echo 0;
+                    }
+                    ?>
+                
+                  </span>
+                </span>
+              </button>
               </li>
               
             </ul>
@@ -85,17 +103,17 @@
         <div class="">
           <p class="pfooter" >INSTITUCIONAL</p>
           <ul class="p-0">
-            <a class="link-light link-underline link-underline-opacity-0" href="pages/FaleConosco.html"><li>Quem somos</li></a>
-            <a class="link-light link-underline link-underline-opacity-0" href="pages/FaleConosco.html"><li>Localizaçao</li></a>
-            <a class="link-light link-underline link-underline-opacity-0" href="pages/FaleConosco.html"><li>Autor</li></a>
+            <a class="link-light link-underline link-underline-opacity-0" href="FaleConosco.php"><li>Quem somos</li></a>
+            <a class="link-light link-underline link-underline-opacity-0" href="FaleConosco.php"><li>Localizaçao</li></a>
+            <a class="link-light link-underline link-underline-opacity-0" href="FaleConosco.php"><li>Autor</li></a>
           </ul>
         </div>
 
         <div class="">
           <p class="pfooter">Ajuda</p>
           <ul class="p-0">
-            <a class="link-light link-underline link-underline-opacity-0"  href="pages/FaleConosco.html"><li>Sac</li></a>
-            <a class="link-light link-underline link-underline-opacity-0"  href="pages/FaleConosco.html"><li>Fale Conosco</li></a>
+            <a class="link-light link-underline link-underline-opacity-0"  href="FaleConosco.php"><li>Sac</li></a>
+            <a class="link-light link-underline link-underline-opacity-0"  href="FaleConosco.php"><li>Fale Conosco</li></a>
           </ul>
         </div>
       
