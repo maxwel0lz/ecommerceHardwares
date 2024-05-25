@@ -74,30 +74,61 @@
                 </thead>
                 <tbody  id="listaCart" class="">
                   <?php
+                    include '../model/ClassProduto.php';
                     include '../data/connectionBD.php';
                     $conn = conectBD();
-                    $sql = 'SELECT * FROM produto  ';
+                    $sql = 'SELECT * FROM produto ';
                     //EXECUTANDO QUERY
                     $result = $conn->query($sql);
                 
                     //ENQUANTO HOVER RESULTADO PROUCURE DADOS IGUAS OS INPUTS
-                    $partes = explode(" ", $_SESSION['idProduto']);
-                    while($row = $result->fetch_assoc()){
-                      if($_SESSION['idProduto'] == $row['id_prod'])  
-                        $imagem = $row['imagem_prod'];
+                    function crateProduto($result){
+                      $arr = [];
+                      while($row = $result->fetch_assoc()){
+                        $id = $row['id_prod'];
+                        $marca = $row['marca_prod'];
                         $titulo = $row['titulo_prod'];
+                        $imagem = $row['imagem_prod'];
+                        $descricao = $row['descricao_prod'];
                         $valor = $row['valor_prod'];
-                        echo '
-                        <tr class="linha-item-tab">
-                        <td class="col_item-tab"><img src='.$imagem.' width="100px" alt=""></td>
-                        <td class="col_item-tab">'.$titulo.'</td>
-                        <td class="col_item-tab">1</td>
-                        <td class="col_item-tab">'.$valor.'</td>
-                        <td class="col_item-tab"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-trash" viewBox="0 0 16 16"><path d="M5.5 5.5A.5.5 0 0 1 6 6v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5m2.5 0a.5.5 0 0 1 .5.5v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5m3 .5a.5.5 0 0 0-1 0v6a.5.5 0 0 0 1 0z"/><path d="M14.5 3a1 1 0 0 1-1 1H13v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V4h-.5a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1H6a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1h3.5a1 1 0 0 1 1 1zM4.118 4 4 4.059V13a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1V4.059L11.882 4zM2.5 3h11V2h-11z"/></svg></td>
-                      </tr>
-                        ';
+                        
+                        $prod = new Produto($id,$marca,$titulo,$imagem,$descricao,$valor); 
+                        array_push($arr , $prod);
+                      } 
+                    return $arr;
+                  }
+
+                  if (isset($_SESSION['idProduto'])) {
+                    $partes = explode(" ", $_SESSION['idProduto']);
+                    $partes = array_map('intval', $partes);
+                    $produtos = crateProduto($result);
+                    $total = 0;
+                    foreach($partes as $exibir){
+                      foreach($produtos as $produto){
+                        if ($exibir ==  $produto->getIdProd()) {
+                          $total += $produto->getValorProd();
+                          echo'
+                                <tr class="linha-item-tab">
+                                  <td class="col_item-tab"><img src='.$produto->getImagemProd() .' width="100px" alt=""></td>
+                                  <td class="col_item-tab">'. $produto->getTituloProd().'</td>
+                                  <td class="col_item-tab">1</td>
+                                  <td class="col_item-tab">'.$produto->getValorProd().'</td>
+                                  <td id="lixeira" class="col_item-tab"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-trash" viewBox="0 0 16 16"><path d="M5.5 5.5A.5.5 0 0 1 6 6v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5m2.5 0a.5.5 0 0 1 .5.5v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5m3 .5a.5.5 0 0 0-1 0v6a.5.5 0 0 0 1 0z"/><path d="M14.5 3a1 1 0 0 1-1 1H13v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V4h-.5a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1H6a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1h3.5a1 1 0 0 1 1 1zM4.118 4 4 4.059V13a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1V4.059L11.882 4zM2.5 3h11V2h-11z"/></svg></td>
+                                </tr>
+                              ';
+                        }
                       }
-                      ?>
+                    }
+                  }
+                  else{
+                    echo '<div class="alert alert-primary d-flex align-items-center" role="alert">
+                    
+                    <div>
+                      Não a itens no carrinho!
+                    </div>
+                  </div>';
+                  }
+                  ?>
                   
                 </tbody>
               </table>
@@ -105,26 +136,24 @@
           </div>
           <div id="boxpedido">
             <div id="box-1">
-              <?php
-              echo $_SESSION['idProduto'];
-              
-              ?>
               <h2>Rerumo</h2>
               <span id="sub">Subtotal:
-                <strong>R$100,00</strong>
+                <strong>
+                  <?php echo $total ?>
+                </strong>
               </span>
               <span id="total">Total:
-                <strong>R$100,00</strong>
+                <strong>R$<?php echo $total ?></strong>
               </span>
               <div id="info-avista">
                 <p>á vista</p>
-                <strong>R$150,89</strong>
+                <strong>R$<?php echo $total ?></strong>
                 <h6>no PIX com 15% desconto</p>
               </div>
               <div id="info-cred">
                 <p>á vista</p>
-                <strong>R$150,89</strong>
-                <h6>Até 12x no de <span>R$25,00</span><br>sem juros no cartão</p>
+                <strong>R$<?php echo $total ?></strong>
+                <h6>Até 12x no de <span>R$<?php echo round($total/12 , 2) ?></span><br>sem juros no cartão</p>
               </div>
 
               <div id="box-btn-comprar">
